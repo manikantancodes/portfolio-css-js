@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mandal Manikantan's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+        /* Additional styles for project grid and alignment */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .skills-container, .contact-details-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .details-container {
+            margin: 10px;
+        }
+
+        /* Fix for hamburger menu */
+        .hamburger-menu .menu-links {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hamburger-menu.open .menu-links {
+            display: flex;
+        }
+
+        .hamburger-icon {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Mandal Manikantan</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Mandal Manikantan</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Mandal Manikantan</h1>
+            <p class="section__text__p2">Data/Business Analyst</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/Mandal_Manikantan_CV.pdf')">Download CV</button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/mandalmanikantan/'" />
+                <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/manikantancodes'" />
+            </div>
+        </div>
+        <div class="section__pic-container">
+            <img src="./assets/mz8n7op1vwwqob6g8ycs5albkzh4i721.jpg" alt="Abstract tech background" class="abstract-tech-bg" />
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+                        <h3>Experience</h3>
+                        <p>2+ years <br />Data/Business Analysis</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png" alt="Education icon" class="icon" />
+                        <h3>Education</h3>
+                        <p>Master of Business Administration<br />Bachelor of Engineering in Electronics and Communication</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>Skilled Data/Business Analyst with expertise in SQL, Python, and data visualization. Proficient in leveraging data-driven insights and innovative solutions to drive business growth. Seeking a challenging role to apply my technical skills and analytical mindset to drive strategic decision-making and process optimization.</p>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="skills-container">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Data Analysis</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>SQL (SQL Server, MySQL, PostgreSQL)</h3>
+                                <p>Advanced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>Python (Pandas, NumPy, SciPy, Matplotlib)</h3>
+                                <p>Advanced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>Data Visualization (Power BI, Tableau, Plotly, Seaborn)</h3>
+                                <p>Advanced</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Business Analysis</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>Data Cleaning</h3>
+                                <p>Advanced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>Data Preprocessing & Feature Engineering</h3>
+                                <p>Advanced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>Machine Learning (Model Optimization, Deployment, Hyper Parameter Tuning)</h3>
+                                <p>Advanced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>Data Storytelling & Statistical Analysis</h3>
+                                <p>Advanced</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+    </section>
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./assets/project-1.jpg" alt="YouTube Data Harvesting" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">YouTube Data Harvesting</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/manikantancodes/youtubeharvest'">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://datascienceportfol.io/manikantan'">Live Demo</button>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./assets/project-2.jpg" alt="PhonePe Pulse Data Visualization" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">PhonePe Pulse Data Visualization</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/manikantancodes/phonepepulse'">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://datascienceportfol.io/manikantan'">Live Demo</button>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./assets/project-3.jpg" alt="Airbnb Analysis" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">Airbnb Analysis</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/manikantancodes/airbnbanalysis'">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://datascienceportfol.io/manikantan'">Live Demo</button>
+                </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./assets/project-4.jpg" alt="Breast Cancer Prediction" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">Breast Cancer Prediction</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/manikantancodes/breastcancer'">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://datascienceportfol.io/manikantan'">Live Demo</button>
+                </div>
+            </div>
+            <!-- Project 5 -->
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./assets/project-5.jpg" alt="Singapore Resale Flat Price Prediction" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">Singapore Resale Flat Price Prediction</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/manikantancodes/singaporeflat'">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://datascienceportfol.io/manikantan'">Live Demo</button>
+                </div>
+            </div>
+            <!-- Project 6 -->
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./assets/project-6.jpg" alt="Industrial Copper Modeling" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">Industrial Copper Modeling</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/manikantancodes/coppermodeling'">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://datascienceportfol.io/manikantan'">Live Demo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <p class="section__text__p1">Connect With Me</p>
+        <h1 class="title">Contact Info</h1>
+        <div class="section-container">
+            <div class="contact-details-container">
+                <div class="details-container">
+                    <img src="./assets/phone.png" alt="Phone icon" class="icon" />
+                    <h3>Phone</h3>
+                    <p>+91 12345 67890</p>
+                </div>
+                <div class="details-container">
+                    <img src="./assets/email.png" alt="Email icon" class="icon" />
+                    <h3>Email</h3>
+                    <p>manikantan@example.com</p>
+                </div>
+                <div class="details-container">
+                    <img src="./assets/location.png" alt="Location icon" class="icon" />
+                    <h3>Location</h3>
+                    <p>Chennai, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
